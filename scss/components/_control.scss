@@ -1,0 +1,58 @@
+.control {
+
+    &__game-control {
+        margin: 14px 0 0 0;
+    }
+
+    &__btn {
+        width: 170px;
+        height: 50px;
+        border: none;
+        background: none;
+        color: #fff;
+        border-radius: 4px;
+        transition: 0.3s;
+    }
+
+    &__btn:hover {
+        cursor: pointer;
+    }
+
+    &__start {
+        background: #1f6bb8;
+    }
+
+    &__start:hover {
+        background: #185594;
+    }
+
+    &__end {
+        background: #b81f1f;
+    }
+
+    &__end:hover {
+        background: #961414;
+    }
+
+    &__state-game {
+        @include flex-aic-jcsb();
+        margin: 20px 0;
+    }
+
+    &__current-player {}
+
+    &__player-turn {}
+
+    &__player-number {}
+
+    &__current-question {}
+
+    &__question {}
+
+    &__number-question {}
+
+    &__of {}
+
+    &__all-questions {}
+
+}

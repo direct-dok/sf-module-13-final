@@ -1,0 +1,14 @@
+@import 'fonts';
+@import 'normalize';
+@import 'mixin';
+@import 'variables';
+@import 'general';
+// components
+@import 'components/header';
+@import 'components/control';
+@import 'components/settings';
+@import 'components/game';
+@import 'components/question';
+@import 'components/options';
+@import 'components/statistic-table';
+@import 'components/_message-error';

@@ -1,0 +1,685 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap");
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  display: block;
+}
+
+hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+a {
+  background-color: transparent;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+img {
+  border-style: none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type=checkbox],
+[type=radio] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+}
+
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type=search] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+details {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+template {
+  display: none;
+}
+
+[hidden] {
+  display: none;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.display-none {
+  display: none;
+}
+
+.container__game-block {
+  width: 50%;
+  height: 100vh;
+  padding: 0 70px 0 0;
+  border-right: 1px solid #d4d4d4;
+}
+
+.container__players-table-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+  height: 100vh;
+  padding: 0 0 0 70px;
+}
+
+.table {
+  width: 100%;
+}
+
+.table__crash-game-message {
+  font-size: 3em;
+  font-weight: 900;
+  margin: 40px 0 0 0;
+  color: #f07a00;
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.header__title {
+  font-size: 3em;
+  font-weight: 900;
+}
+
+.control__game-control {
+  margin: 14px 0 0 0;
+}
+.control__btn {
+  width: 170px;
+  height: 50px;
+  border: none;
+  background: none;
+  color: #fff;
+  border-radius: 4px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.control__btn:hover {
+  cursor: pointer;
+}
+.control__start {
+  background: #1f6bb8;
+}
+.control__start:hover {
+  background: #185594;
+}
+.control__end {
+  background: #b81f1f;
+}
+.control__end:hover {
+  background: #961414;
+}
+.control__state-game {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 20px 0;
+}
+.settings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.settings__number-of-players, .settings__game-time {
+  width: 300px;
+}
+.settings__label {
+  font-size: 0.8em;
+  font-weight: 700;
+}
+.settings__input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.settings__set-number-game {
+  width: 40px;
+}
+.settings__range-game-time {
+  margin: 0 10px;
+}
+.settings__wrapper-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 40px;
+}
+.game__response-status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.3em;
+  font-weight: 700;
+  color: #7d7d7d;
+  text-transform: uppercase;
+  text-align: center;
+  width: 150px;
+  height: 150px;
+  background-color: #c9c9c9;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 50%;
+  border: 3px solid #b9b9b9;
+}
+.game__response-status--success {
+  background: #438531;
+  border: 3px solid #366b28;
+  color: #fff;
+}
+.game__response-status--errror {
+  background: #9e2424;
+  border: 3px solid #8a1e1e;
+  color: #fff;
+}
+.game__prepare-time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 5em;
+}
+.game__tick-second {
+  font-size: 5em;
+  font-weight: 900;
+  color: #366b28;
+}
+.game__minus-time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.3em;
+  color: #a80000;
+}
+.game__minus-time .game__elem-minus-time {
+  font-weight: 900;
+  font-size: 1.5em;
+  margin: 0 6px 0 0;
+}
+.game__plus-time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.3em;
+  color: #007007;
+}
+.game__plus-time .game__elem-plus-time {
+  font-weight: 900;
+  font-size: 1.5em;
+  margin: 0 6px 0 0;
+}
+.game__timer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 200px;
+  height: 60px;
+  margin: 0 auto 30px;
+}
+.game__timer-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 3em;
+  font-weight: 900;
+}
+.game__timer-wrapper div {
+  margin: 0 3px;
+}
+.game__important-message {
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+.game__message-everybody-lost {
+  background: #e86f6f;
+  border: 2px solid #cc5454;
+}
+.game__message-everybody-lost p {
+  font-size: 1.1em;
+}
+.game__title-message-everybody-lost {
+  font-size: 2em;
+}
+.game__question-million {
+  background: #65ab49;
+  border: 2px solid #519137;
+}
+.game__question-million p {
+  font-size: 1.1em;
+}
+.game__title-question-million {
+  font-size: 2em;
+}
+.game__question-eight {
+  background: #eb8705;
+  border: 2px solid #cf7500;
+}
+.game__question-eight p {
+  font-size: 1.1em;
+}
+.game__title-question-eight {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 2em;
+}
+.game__title-question-eight span {
+  font-size: 3.5em;
+  line-height: 0.1em;
+}
+.game__victory {
+  border: 3px solid #ff8c5e;
+}
+.game__victory p {
+  color: #a13f18;
+}
+.game__title-question-victory {
+  font-size: 2em;
+  color: #db7304;
+}
+.game__message-lost-question-eight {
+  font-size: 1.3em;
+  font-weight: 900;
+  text-align: center;
+  color: #bf1b1b;
+  border: 2px solid #e37474;
+  border-radius: 10px;
+  padding: 30px;
+  margin: 0 0 20px;
+}
+.game__message-success-question-million {
+  font-size: 1.3em;
+  text-align: center;
+  color: #2d752b;
+  border: 2px solid #5ab058;
+  border-radius: 10px;
+  padding: 30px;
+  margin: 0 0 20px;
+}
+.game__title-message-success-question-million {
+  font-weight: 900;
+  font-size: 2em;
+}
+
+.question__label {
+  font-weight: 700;
+  color: #bdbdbd;
+}
+.question__text {
+  font-size: 1.6em;
+  font-weight: 900;
+  padding: 0;
+  margin: 0;
+}
+
+.options {
+  margin: 20px 0 0 0;
+}
+.options_label {
+  margin: 0;
+}
+.options__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  margin: 10px -10px 0;
+  padding: 0;
+  list-style: none;
+}
+.options__item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: calc(50% - 20px);
+  background: #356ba1;
+  height: auto;
+  margin: 0 10px 20px 10px;
+  padding: 15px 45px;
+  border-radius: 5px;
+  color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.options__item span {
+  position: absolute;
+  left: 20px;
+  top: calc(50% - 0.6em);
+  font-size: 1.1em;
+  font-weight: 900;
+  margin: 0 10px 0 0;
+  color: #0f2e4d;
+}
+.options__item:hover {
+  cursor: pointer;
+  background: #295a8a;
+}
+
+.table__title {
+  font-weight: 900;
+  font-size: 1.6em;
+}
+.table__wrapper {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table__wrapper tr {
+  padding: 0 30px;
+}
+.table__wrapper tr th {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0 0 10px 0;
+}
+.table__wrapper tr td {
+  text-align: center;
+  padding: 15px 0 15px 0;
+}
+.table__header {
+  padding: 0 0 10px 0;
+}
+.table__header th {
+  text-align: left;
+  font-size: 0.9em;
+}
+.table__user-line {
+  border-bottom: 1px solid #d4d4d4;
+}
+.table__user-line:last-child {
+  border: none;
+}
+.table__user-id {
+  font-weight: 900;
+  font-size: 1.3em;
+  color: #b5b5b5;
+}
+.table__answer-true {
+  font-weight: 900;
+  font-size: 1.3em;
+  color: #009c32;
+}
+.table__answer-false {
+  font-weight: 900;
+  font-size: 1.3em;
+  color: #cc0000;
+}
+.table__status-player {
+  font-weight: 900;
+  font-size: 1.3em;
+  color: #009c32;
+}
+.table__dropped-out {
+  position: relative;
+}
+.table__dropped-out .table__status-player {
+  color: #cc0000;
+}
+.table__dropped-out::after {
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  top: 50%;
+  background: #cc0000;
+}
+.table__player-label {
+  display: none;
+  width: 20px;
+  height: 20px;
+  background: #ed7b00;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+.table__current-player .table__player-label {
+  display: block;
+}
+.table__winner-player .table__status-player {
+  color: #FE8B00;
+}
+.table__star-winner {
+  max-width: 35px;
+}
+
+.message-error__modal {
+  position: absolute;
+  left: calc(50% - 300px);
+  top: calc(50% - 200px);
+  width: 600px;
+  height: 400px;
+  padding: 50px;
+  background: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.message-error__title {
+  font-size: 2.4em;
+  text-transform: uppercase;
+  margin: 0;
+  color: #da5555;
+}
+.message-error__text-message {
+  font-size: 1.2em;
+  line-height: 1.5em;
+}

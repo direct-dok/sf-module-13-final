@@ -1,0 +1,47 @@
+.container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.display-none {
+    display: none;
+}
+
+.container__game-block {
+    width: 50%;
+    height: 100vh;
+    padding: 0 70px 0 0;
+    border-right: 1px solid #d4d4d4;
+}
+
+.container__players-table-block {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 100vh;
+    padding: 0 0 0 70px;
+    
+}
+
+.table {
+    width: 100%;
+}
+
+.table__crash-game-message {
+    font-size: 3em;
+    font-weight: 900;
+    margin: 40px 0 0 0;
+    color: #f07a00;
+}
+
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, .7);
+}
+

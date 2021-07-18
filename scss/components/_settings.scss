@@ -1,0 +1,44 @@
+.settings {
+    @include flex-aic-jcsb();
+
+	&__number-of-players, 
+    &__game-time {
+        width: 300px;
+    }
+
+	&__label {
+        font-size: 0.8em;
+        font-weight: 700;
+    }
+
+    &__input {
+        box-sizing: border-box;
+    }
+
+	&__set-number-game {
+        width: 40px;
+    }
+
+	&__game-time {
+
+    }
+
+	&__range-game-time {
+        margin: 0 10px;
+    }
+
+    &__wrapper-input {
+        display: flex;
+        align-items: center;
+        height: 40px;
+    }
+
+    &__wrapper-input-flex {
+       
+
+        span:first-child {
+
+        }
+    }
+
+}

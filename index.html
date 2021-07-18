@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="container__game-block">
+            <div class="header">
+                <h1 class="header__title">Игра Тик-Так-Бум</h1>
+            </div>
+            <div class="settings">
+                <div class="settings__number-of-players">
+                    <label class="settings__label">Количество игроков</label>
+                    <div class="settings__wrapper-input">
+                        <input type="number" name="number-of-players" value="2" min="2" max="4"
+                            class="settings__input settings__set-number-game">
+                    </div>
+                </div>
+                <div class="settings__game-time">
+                    <label class="settings__label">Установите продолжительность игры</label>
+                    <div class="settings__wrapper-input settings__wrapper-input-flex">
+                        <input type="range" name="game-time" min="1" max="10" value="4"
+                            class="settings__input settings__range-game-time">
+                        <span class="settings__quantity-minuts">10</span>&nbsp;<span
+                            class="settings__time-metrics">минут</span>
+                    </div>
+                </div>
+            </div>
+            <div class="control">
+                <div class="control__game-control">
+                    <button class="control__start control__btn">Старт игры</button>
+                    <button class="control__end control__btn display-none">Закончить игру</button>
+                </div>
+                <div class="control__state-game">
+                    <div class="control__current-player display-none">
+                        <span class="control__player-turn">Ход игрока: </span><span
+                            class="control__player-number">2</span>
+                    </div>
+                    <div class="control__current-question display-none">
+                        <span class="control__question">Вопрос </span>
+                        <span class="control__number-question">4</span>
+                        <span class="control__of">из</span>
+                        <span class="control__all-questions">30</span>
+                    </div>
+                </div>
+            </div>
+            <div class="game">
+                <div class="game__response-status">Статус ответа</div>
+                <!-- <div class="game__response-status game__response-status--success game__response-status--errror">Верно</div> -->
+                <div class="game__prepare-time">
+                    <div class="game__tick-second"></div>
+                    <div class="game__message">
+                        <!-- <div class="game__minus-time"><span class="game__elem-minus-time">-5</span> секунд за неверный ответ</div> -->
+                        <!-- <div class="game__plus-time"><span class="game__elem-plus-time">+5</span> секунд за верный ответ</div>  -->
+                    </div>
+                </div>
+
+                <div class="game__important-system-messages">
+                    <!-- <div class="game__important-message game__message-everybody-lost">
+                        <h2 class="game__title-message-everybody-lost">Игра окончена</h2>
+                        <p>Так как все игроки вылетели из игры, не ответив на все вопросы, то все проиграли! Вы можете начать игру заново, нажав на кнопку "Старт игры"</p>
+                    </div> -->
+                    <!-- <div class="game__important-message game__question-million">
+                        <h2 class="game__title-question-million">Вопрос на миллион $1000000</h2>
+                        <p>Это вопрос на миллион! Если ответить на него верно, то вы сразу становитесь победителем. Хорошо подумайте, прежде чем ответить, это ваш шанс</p>
+                    </div> -->
+                    <!-- <div class="game__important-message game__question-eight">
+                        <h2 class="game__title-question-eight">Вопрос восьмерка <span>&infin;</span></h2>
+                        <p>Это вопрос восьмерка. Если ответить на данный вопрос не верно, то игра будет проиграна всеми игроками сразу. Будьте внимательны, хорошо подумайте прежде чем дать ответ</p>
+                    </div> -->
+                    <!-- <div class="game__important-message game__victory">
+                        <h2 class="game__title-question-victory">Выиграл игрок под номером <span class="game__winner">2</span></h2>
+                        <p>Отпразднуйте вашу победу в кругу друзей, вы сделали практически невозможное, ваш IQ зашкаливает и теперь вы можете по праву считать себя одним из самых умных людей на планете. Вас без экзаменов возьмут в лучшие университеты мира. Желаем удачи!</p>
+                    </div> -->
+                    <!-- <div class="game__message-lost-question-eight">Вы неверно ответили на вопрос "Восьмерку", поэтому игра проиграна всеми игроками</div> -->
+
+                    <!-- <div class="game__message-success-question-million">
+                        <h2 class="game__title-message-success-question-million">Выиграл игрок под номером <span class="game__num-player-million">2</span></h2>
+                        Так как верно ответил на вопрос на "Миллион". Поздравляем!!
+                    </div> -->
+                </div>
+
+                <div class="game__timer">
+                    <div class="game__timer-wrapper">
+                        <div class="game__minuts">00</div>
+                        <div class="game__separator">:</div>
+                        <div class="game__seconds">00</div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="block-question-answers display-none"> -->
+            <div class="block-question-answers display-none">
+                <div class="question">
+                    <div class="question__label">Вопрос:</div>
+                    <p class="question__text">
+                        Столица Италии?
+                    </p>
+                </div>
+                <div class="options">
+                    <p class="options_label question__label">Выберите верный ответ:</p>
+                    <ul class="options__items">
+                        <li class="options__item">
+                            <span>a.</span>
+                            Ватикан
+                        </li>
+                    <li class="options__item">
+                        <span>b.</span>
+                        Рим
+                    </li>
+                    <li class="options__item">
+                        <span>c.</span>
+                        Ватикан
+                    </li>
+                    <li class="options__item">
+                        <span>d.</span>
+                        Рим
+                    </li>
+                    <li class="options__item">
+                        <span>f.</span>
+                        Рим
+                    </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container__players-table-block">
+            <!-- <div class="table display-none"> -->
+            <div class="table">
+                <h2 class="table__title">Статистика по игрокам</h2>
+                <table class="table__wrapper">
+                    <thead>
+                        <tr class="table__header">
+                            <th>Ход</th>
+                            <th>Номер игрока</th>
+                            <th>Верных ответов</th>
+                            <th>Неверных ответов</th>
+                            <th>Статус</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table__body">
+                        <tr class="table__user-line table__current-player" data-iduser="1">
+                            <td class="table__player-turn"><div class="table__player-label"></div></td>
+                            <td class="table__user-id">1</td>
+                            <td class="table__answer-true">5</td>
+                            <td class="table__answer-false">2</td>
+                            <td class="table__status-player">В игре</td>
+                        </tr>
+                        <tr class="table__user-line table__dropped-out" data-iduser="1">
+                            <td class="table__player-turn"><div class="table__player-label"></div></td>
+                            <td class="table__user-id">2</td>
+                            <td class="table__answer-true">5</td>
+                            <td class="table__answer-false">2</td>
+                            <td class="table__status-player ">Выбыл</td>
+                        </tr>
+                        <tr class="table__user-line" data-iduser="1">
+                            <td class="table__player-turn"><div class="table__player-label"></div></td>
+                            <td class="table__user-id">3</td>
+                            <td class="table__answer-true">5</td>
+                            <td class="table__answer-false">2</td>
+                            <td class="table__status-player">В игре</td>
+                        </tr>
+                        <tr class="table__user-line table__winner-player" data-iduser="1">
+                            <td class="table__player-turn"><div class="table__player-label"></div>
+                                <!-- <img src="./img/star.png" alt="Star winner" class="table__star-winner"> -->
+                            </td>
+                            <td class="table__user-id">4</td>
+                            <td class="table__answer-true">5</td>
+                            <td class="table__answer-false">2</td>
+                            <td class="table__status-player">Победитель</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="table__crash-game-message">
+                    <!-- Началась игра на вылет!! -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="overlay"></div> -->
+    <div class="add-overlay"></div>
+    <div class="message-error">
+        <!-- <div class="message-error__modal">
+            <h2 class="message-error__title">Возникла ошибка!</h2>
+            <p class="message-error__text-message">
+                Невозможно начать игру, так как в данный момент наблюдаются проблемы в технической части приложения. Приносим свои извинения за неудобста. Попоробуйте зайти немного позже, или напишите нашему администратору на электронную почту admin@tittakbom.ru. Он обязательно все исправит.
+            </p>
+        </div> -->
+    </div>
+    <script src="js/taskListMini.js"></script>
+    <script src="js/taskListCrashGame.js"></script>
+    <script src="js/taskList.js"></script>
+    <script src="js/messageHtmlCode.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/Settings.js"></script>
+    <script src="js/StatisticPlayers.js"></script>
+    <script src="js/Controller.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

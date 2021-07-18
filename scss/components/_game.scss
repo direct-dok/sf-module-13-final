@@ -1,0 +1,194 @@
+.game {
+	&__response-status {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3em;
+        font-weight: 700;
+        color: #7d7d7d;
+        text-transform: uppercase;
+        text-align: center;
+        width: 150px;
+        height: 150px;
+        background-color: #c9c9c9;
+        margin: 0 auto;
+        text-align: center;
+        border-radius: 50%;
+        border: 3px solid #b9b9b9;
+
+		&--success {
+            background: #438531;
+            border: 3px solid #366b28;
+            color: #fff;
+        }
+
+		&--errror {
+            background: #9e2424;
+            border: 3px solid #8a1e1e;
+            color: #fff;
+        }
+
+	}
+
+    &__prepare-time {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 5em;
+    }
+
+    &__tick-second {
+        font-size: 5em;
+        font-weight: 900;
+        color: #366b28;
+    }
+
+    &__minus-time {
+        display: flex;
+        align-items: center;
+        font-size: 1.3em;
+        color: #a80000;
+        
+
+        .game__elem-minus-time {
+            font-weight: 900;
+            font-size: 1.5em;
+            margin: 0 6px 0 0;
+        }
+    }
+
+    &__plus-time {
+        display: flex;
+        align-items: center;
+        font-size: 1.3em;
+        color: #007007;
+
+        .game__elem-plus-time {
+            font-weight: 900;
+            font-size: 1.5em;
+            margin: 0 6px 0 0;
+        }
+    }
+
+	&__timer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 200px;
+        height: 60px;
+        margin: 0 auto 30px;
+
+    }
+
+	&__timer-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3em;
+        font-weight: 900;
+        
+        & div {
+            margin: 0 3px;
+        }
+    }
+
+	&__minuts {}
+
+	&__separator {}
+
+	&__seconds {}
+
+    &__important-message {
+        text-align: center;
+        color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    &__message-everybody-lost {
+        background: #e86f6f;
+        border: 2px solid #cc5454;
+        
+        p {
+            font-size: 1.1em;
+        }
+    }
+
+    &__title-message-everybody-lost {
+        font-size: 2em;
+    }
+
+    &__question-million {
+        background: #65ab49;
+        border: 2px solid #519137;
+
+        p {
+            font-size: 1.1em;
+        }
+    }
+
+    &__title-question-million {
+        font-size: 2em;
+    }
+
+    &__question-eight {
+        background: #eb8705;
+        border: 2px solid #cf7500;
+
+        p {
+            font-size: 1.1em;
+        }
+    }
+
+    &__title-question-eight {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2em;
+
+        span {
+            font-size: 3.5em;
+            line-height: .1em;
+        }
+    }
+
+    &__victory {
+        border: 3px solid #ff8c5e;
+        
+        p {
+            color: #a13f18;
+        }
+    }
+
+    &__title-question-victory {
+        font-size: 2em;
+        color: #db7304;
+    }
+
+    &__message-lost-question-eight {
+        font-size: 1.3em;
+        font-weight: 900;
+        text-align: center;
+        color: #bf1b1b;
+        border: 2px solid #e37474;
+        border-radius: 10px;
+        padding: 30px;
+        margin: 0 0 20px;
+    }
+
+    &__message-success-question-million {
+        font-size: 1.3em;
+        text-align: center;
+        color: #2d752b;
+        border: 2px solid #5ab058;
+        border-radius: 10px;
+        padding: 30px;
+        margin: 0 0 20px;
+    }
+
+    &__title-message-success-question-million {
+        font-weight: 900;
+        font-size: 2em;
+    }
+
+}
